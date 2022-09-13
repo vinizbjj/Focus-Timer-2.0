@@ -10,7 +10,7 @@ const buttonSoundFire = document.querySelector('.fireSound')
 
 let minutes
 
-let isFinished = minutes <= 0 && seconds <= 0
+
 
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
@@ -21,12 +21,12 @@ function countdown() {
         let seconds = Number(secondsDisplay.textContent)
         let minutes = Number(minutesDisplay.textContent)
 
-        if (isFinished) {
+        if (minutes <= 0 && seconds <= 0) {
             return
 
         }
         if (seconds <= 0) {
-            seconds = 4
+            seconds = 7
 
             minutesDisplay.textContent = String(minutes - 1).padStart(2, '0')
         }
